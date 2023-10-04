@@ -1,6 +1,7 @@
 #include <iostream>
 #include "IRJournalLumineux.h"
 #include "IRServeurUDP"
+#include "IRClientUDP"
 
 int main()
 {
@@ -13,4 +14,9 @@ int main()
     OuvrirLaSocketDEcoute(4000)
     RecevoirUnMessage(msg)
     FermerLaSocket()
-}
+    
+    IRClientUDP client
+    OuvrirLaSocketDeCommunication("172.20.21.157",40)
+    EnvoyerUnMessage(msg)
+    FermerLaSocket()
+    }
