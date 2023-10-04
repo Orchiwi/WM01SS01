@@ -1,7 +1,7 @@
 #include <iostream>
 #include "IRJournalLumineux.h"
-#include "IRServeurUDP"
-#include "IRClientUDP"
+#include "IRServeurUDP.h"
+#include "IRClientUDP.h"
 
 int main()
 {
