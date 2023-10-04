@@ -12,7 +12,7 @@ int main()
  }
 /*
     IRServeurUDP serveur;
-    OuvrirLaSocketDEcoute(4000);
+    OuvrirLaSocketDEcoute(4014);
     RecevoirUnMessage(msg);
     FermerLaSocket();
     
