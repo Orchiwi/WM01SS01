@@ -10,11 +10,7 @@ int main()
    serveur.OuvrirLaSocketDEcoute(4014);
    while(true)
 {
-
    serveur.RecevoirUnMessage(msg);
-
-
-
    IRJournalLumineux journal;
    journal.OuvrirPortSerie("/dev/ttyUSB0");
    journal.EnvoyerTrame(msg);
