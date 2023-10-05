@@ -1,32 +1,31 @@
 #include <iostream>
 #include "IRJournalLumineux.h"
 #include "IRServeurUDP.h"
-#include "IRClientUDP.h"
-#include <string>
+
 
 int main()
- {  
+{  
+   string msg;
+   IRServeurUDP serveur;
+   serveur.OuvrirLaSocketDEcoute(4014);
+   while(true)
+{
 
-    IRServeurUDP serveur;
-    serveur.OuvrirLaSocketDEcoute(4014);
-    string msg;
-    serveur.RecevoirUnMessage(msg);
-    serveur.FermerLaSocket();
+   serveur.RecevoirUnMessage(msg);
 
 
-    IRJournalLumineux journal;
-    journal.OuvrirPortSerie("/dev/ttyUSB0");
-    journal.EnvoyerTrame(msg);
-    journal.FermerPortSerie();
- 
 
-    
- }
+   IRJournalLumineux journal;
+   journal.OuvrirPortSerie("/dev/ttyUSB0");
+   journal.EnvoyerTrame(msg);
+   journal.FermerPortSerie();
+}
+   serveur.FermerLaSocket();
+
+
+}
 /*
-    IRClientUDP client;
-    client.OuvrirLaSocketDeCommunication("172.20.21.157",40);
-    client.EnvoyerUnMessage(msg);
-    client.FermerLaSocket();
-    }
+
+
 
 */
