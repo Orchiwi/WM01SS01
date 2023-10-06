@@ -1,4 +1,4 @@
-﻿#include "IRLigne.h"
+#include "IRLigne.h"
 #include <stdio.h>
 #include <iostream>
 #include <iomanip>
@@ -8,7 +8,7 @@
 IRLigne::IRLigne( )
 {
     //strcpy(m_message, "Hello");
-    m_numeroAfficheur = 0;
+    m_numeroAfficheur = 1;
     m_message = "Hello";
     m_numeroLigne = 1;
     m_numeroPage = 'A';
